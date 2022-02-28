@@ -1,5 +1,12 @@
 <?php
-    require_once 'includes/database.php';
+    session_start();
+
+    $_SESSION = array();
+
+    session_destroy();
+
+    header('Location: index.php');
+    exit;
 ?>
 <html lang="en">
 <head>
@@ -12,7 +19,6 @@
 <body>
  
     <?php 
-    
         echo('You have successfully logged out'.'<a href="index.php" style="margin-left: 10px;">Go to Home</a>'.'<br>');
         echo('<a href="login.php" style="margin-right: 20px;">Login</a>');
         echo('<a href="register.php"> Register</a>');

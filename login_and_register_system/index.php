@@ -1,5 +1,11 @@
 <?php
-    require_once 'includes/database.php';
+    session_start();
+
+    // if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    //     header("location: login.php");
+    //     exit;
+    // }
+    // require_once 'includes/database.php';
 ?>
 <html lang="en">
 <head>
@@ -12,8 +18,8 @@
 <body>
  
     <?php 
-    if (isset($_POST['username'])) {
-        echo($_POST['username'].'<br>');
+    if (isset($_SESSION['username'])) {
+        echo($_SESSION['username'].'<br>');
         echo('Welcome'.' To'.' Your Home Page'.'<br>');
         echo('<a href="logout.php"> Logout</a>');
     } else {
