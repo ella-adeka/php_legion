@@ -1,5 +1,5 @@
 <?php
-    // Include config file
+    // Include database file
     require_once "includes/database.php";
      
     // Define variables and initialize with empty values
